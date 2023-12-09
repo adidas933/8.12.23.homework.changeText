@@ -6,8 +6,12 @@
 בונוס למי שיצליח לעשות את זה קצר, מאוד קצר :)
 */
 
-function changeText(index) {
-  let inputs = document.querySelector(`#input${index}`);
-  let tag = document.querySelector(`#tag${index}`);
-        tag.innerText = inputs.value;
+function changeText() {
+  let inputs = document.querySelectorAll(`.input`);
+  let tag = document.querySelectorAll('.tag');
+  for (let i = 0; i < inputs.length; i++) {
+    if (inputs[i].value !== '') {
+      tag[i].innerText = inputs[i].value;
+    }
+  }
 }
