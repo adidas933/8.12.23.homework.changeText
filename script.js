@@ -6,12 +6,14 @@
 בונוס למי שיצליח לעשות את זה קצר, מאוד קצר :)
 */
 
-function changeText() {
-  let inputs = document.querySelectorAll(`.input`);
-  let tag = document.querySelectorAll('.tag');
-  for (let i = 0; i < inputs.length; i++) {
-    if (inputs[i].value !== '') {
-      tag[i].innerText = inputs[i].value;
-    }
-  }
+/* function replaceText(tagId, inputId) {
+  const tag = document.getElementById(tagId);
+  const input = document.getElementById(inputId);
+
+    tag.textContent = input.value;
+  
+} */
+
+function replaceText(tagId, inputId) {
+  document.getElementById(tagId).textContent = document.getElementById(inputId).value;
 }
